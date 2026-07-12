@@ -4,7 +4,7 @@ import {
   DEFAULTROWS,
   DEFAULTROWSCORE,
   Shapes,
-} from "./constanst";
+} from "./constants";
 import { BlockProps, BlockType, Cell, Shape } from "./types";
 
 export function createEmptyGrid(): Cell[][] {
