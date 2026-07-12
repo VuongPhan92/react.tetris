@@ -29,7 +29,7 @@ export function moveBlock(
 }
 
 export function randomBlock(): BlockType {
-  var randomIndex = Math.floor(Math.random() * BLOCKTYPES.length);
+  const randomIndex = Math.floor(Math.random() * BLOCKTYPES.length);
 
   return BLOCKTYPES[randomIndex];
 }
@@ -98,7 +98,7 @@ export function rotateShape(shape: Shape[][]): Shape[][] {
   const row = shape.length;
   const col = shape[0].length;
 
-  const newShape: Shape[][] = Array.from({ length: col }, (_, colIndex) =>
+  const newShape: Shape[][] = Array.from({ length: col }, () =>
     Array(row).fill(0),
   );
 

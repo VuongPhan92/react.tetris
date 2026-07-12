@@ -60,9 +60,8 @@ export function gameReducer(state: GameState, action: Action): GameState {
       };
     }
     case "UP": {
-      const currentBlock = { ...state.block };
-      let nextBlock = currentBlock;
-
+      const nextShape = rotateShape(state.block.shape);
+      const nextBlock = { ...state.block, shape: nextShape };
       nextBlock.shape = rotateShape(state.block.shape);
       if (isCollide(nextBlock, state.grid)) {
         return state;
